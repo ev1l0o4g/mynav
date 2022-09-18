@@ -233,9 +233,9 @@
                 <div class="container-fluid p-0">
 
                     <a href="" class="navbar-brand d-md-none" title="啦里叽呱">
-                        <img src="" class="logo-light"
+                        <img src="assets/images/el.png" class="logo-light"
                             alt="啦里叽呱">
-                        <img src="" class="logo-dark d-none"
+                        <img src="assets/images/el.png" class="logo-dark d-none"
                             alt="啦里叽呱">
                     </a>
 
@@ -360,7 +360,7 @@
                 <div class="s-type text-center">
                     <div class="s-type-list big" style="color:#FF0000">
                         <div class="anchor" style="position: absolute; left: 50%; opacity: 0;"></div>
-                        <label for="type-bing" class="" data-id="group-a"><span>常用</span></label>
+                        <label for="type-searx" class="" data-id="group-a"><span>常用</span></label>
                         <label for="type-baidu1" data-id="group-b"><span>搜索</span></label>
                         <label for="type-br" data-id="group-c"><span>工具</span></label>
                         <label for="type-zhihu" data-id="group-d"><span>社区</span></label>
@@ -378,22 +378,25 @@
 
             <div id="search-list" class="hide-type-list">
                 <div class="search-group group-a ">
-                    <ul class="search-type" style="color: #00ff00";>
-                        <li><input checked="checked" hidden="" type="radio" name="type" id="type-bing"
+                    <ul class="search-type">
+						<li><input checked="checked" hidden="" type="radio" name="type" id="type-searx"
+                            value="https://searx.org/search?q=" data-placeholder="searx">
+							<label for="type-searx"><span class="text-muted"><font color="#ffff00">searx</font></span></label></li>
+                        <li><input checked="checked" hidden="" type="radio" name="type" id="type-fsou"
                             value="https://fsofso.com/search?q=" data-placeholder="F搜">
-			    <label for="type-bing"><span class="text-muted"><font color="#ffff00">F搜</font></span></label></li>
+							<label for="type-fsou"><span class="text-muted"><font color="#ffff00">F搜</font></span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-baidu"
                             value="https://www.baidu.com/s?wd=" data-placeholder="百度一下，你就知道">
-			    <label for="type-baidu"><span class="text-muted"><font color="#ffff00">百度</font></span></label></li>
+							<label for="type-baidu"><span class="text-muted"><font color="#ffff00">百度</font></span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-google"
                             value="https://www.google.com/search?q=" data-placeholder="谷歌搜索">
-			    <label for="type-google"><span class="text-muted"><font color="#ffff00">谷歌</font></span></label></li>
-                        <li><input hidden="" type="radio" name="type" id="type-anaconda" 
-			    value="https://www.hong.ke/search?query=" data-placeholder="红客搜索">
-			    <label for="type-anaconda"><span class="text-muted"><font color="#ffff00">红客</font></span></label></li>
+							<label for="type-google"><span class="text-muted"><font color="#ffff00">谷歌</font></span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-red" 
+							value="https://www.hong.ke/search?query=" data-placeholder="红客搜索">
+							<label for="type-red"><span class="text-muted"><font color="#ffff00">红客</font></span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-pubmed"
                             value="https://www.sogou.com/web?query=" data-placeholder="搜狗搜索">
-			    <label for="type-pubmed"><span class="text-muted"><font color="#ffff00">搜狗</font></span></label></li>
+							<label for="type-pubmed"><span class="text-muted"><font color="#ffff00">搜狗</font></span></label></li>
                     </ul>
                 </div>
                 <div class="search-group group-b ">
@@ -404,9 +407,9 @@
                         <li><input hidden="" type="radio" name="type" id="type-google1"
                                 value="https://www.google.com/search?q=" data-placeholder="谷歌搜索"><label
                                 for="type-google1"><span class="text-muted"><font color="#ffff00">谷歌</font></span></label></li>
-                        <li><input hidden="" type="radio" name="type" id="type-360"
+                        <li><input hidden="" type="radio" name="type" id="type-fsou"
                                 value="https://fsofso.com/search?q=" data-placeholder="F搜"><label
-                                for="type-360"><span class="text-muted"><font color="#ffff00">F搜</font></span></label></li>
+                                for="type-fsou"><span class="text-muted"><font color="#ffff00">F搜</font></span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-sogo"
                                 value="https://www.sogou.com/web?query=" data-placeholder="搜狗搜索"><label
                                 for="type-sogo"><span class="text-muted"><font color="#ffff00">搜狗</font></span></label></li>
@@ -434,9 +437,17 @@
                                 value="https://ping.chinaz.com/" data-placeholder="请输入网址(不带 https://)"><label
                                 for="type-ping"><span class="text-muted"><font color="#ffff00">PING 检测</font></span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-404"
-                                value="https://tool.chinaz.com/Links/?DAddress="
+                                value="https://ntool.chinaz.com/linksTesting/list?type=3&url="
                                 data-placeholder="请输入网址(不带https://)"><label for="type-404"><span
                                     class="text-muted"><font color="#ffff00">死链检测</font></span></label></li>
+						<li><input hidden="" type="radio" name="type" id="type-ip"
+                                value="https://ipuu.net/query/ip?search="
+                                data-placeholder="请输入IP(不带https://)"><label for="type-ip"><span
+                                    class="text-muted"><font color="#ffff00">IP查询</font></span></label></li>
+						<li><input hidden="" type="radio" name="type" id="type-company"
+                                value="https://aiqicha.baidu.com/s?q="
+                                data-placeholder="请输入企业名称"><label for="type-company"><span
+                                    class="text-muted"><font color="#ffff00">企业查询</font></span></label></li>
                     </ul>
                 </div>
                 <div class="search-group group-d ">
@@ -471,8 +482,8 @@
                     <ul class="search-type">
                         <li><input hidden="" type="radio" name="type" id="type-zhaopin" value="https://sou.zhaopin.com/jobs/searchresult.ashx?kw=" data-placeholder="智联招聘">
                             <label for="zhaopin"><span  class="text-muted"><font color="#ffff00">智联招聘</font></span></label></li>
-                        <li><input hidden="" type="radio" name="type" id="type-51job" value="https://search.51job.com/?" data-placeholder="前程无忧">
-                            <label for="type-51job"><span class="text-muted"><font color="#ffff00">前程无忧</font></span></label></li>
+                        <li><input hidden="" type="radio" name="type" id="type-bossjob" value="https://www.zhipin.com/job_detail/?city=100010000&query=" data-placeholder="boss直聘">
+                            <label for="type-bossjob"><span class="text-muted"><font color="#ffff00">boss直聘</font></span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-lagou" value="https://www.lagou.com/jobs/list_" data-placeholder="拉钩网">
                             <label for="type-lagou"><span class="text-muted"><font color="#ffff00">拉钩网</font></span></label></li>
                         <li><input hidden="" type="radio" name="type" id="type-liepin" value="https://www.liepin.com/zhaopin/?key=" data-placeholder="猎聘网">
@@ -857,7 +868,7 @@
                     <div class="url-body default">
 			
                         <a href="https://eeooc.com/" target="_blank" data-id="" data-url="https://eeooc.com/" 
-                            class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-original-title="网页版RSS阅读器">
+                            class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-original-title="一个临时邮箱">
                             <div class="card-body">
                                 <div class="url-content d-flex align-items-center">
                                     <div class="url-img mr-2 d-flex align-items-center justify-content-center">
@@ -870,7 +881,7 @@
                                         <div class="text-sm overflowClip_1">
                                             <strong>Eooc!邮箱</strong>
                                         </div>
-                                        <p class="overflowClip_1 m-0 text-muted text-xs">网页版RSS阅读器</p>
+                                        <p class="overflowClip_1 m-0 text-muted text-xs">一个临时邮箱</p>
                                     </div>
                                 </div>
                             </div>
@@ -3374,6 +3385,35 @@
                     </div>
                 </div>
                 
+                <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-6a">
+                    <div class="url-body default">
+			
+                        <a href="https://github.com/Threekiii/Awesome-Redteam" target="_blank" data-id="" data-url="https://github.com/Threekiii/Awesome-Redteam" 
+                            class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-original-title="一个红队知识仓库">
+                            <div class="card-body">
+                                <div class="url-content d-flex align-items-center">
+                                    <div class="url-img mr-2 d-flex align-items-center justify-content-center">
+                                        
+                                        <img class="lazy" src="assets/images/logos/github.png" data-src="assets/images/logos/github.png"
+                                            onerror="javascript:this.src='assets\/images\/logos/github.png'" alt="Awesome-Redteam">
+                                        
+                                    </div>
+                                    <div class="url-info flex-fill">
+                                        <div class="text-sm overflowClip_1">
+                                            <strong>Awesome-Redteam</strong>
+                                        </div>
+                                        <p class="overflowClip_1 m-0 text-muted text-xs">一个红队知识仓库</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Threekiii/Awesome-Redteam" class="togo text-center text-muted is-views" data-id="689"
+                            data-toggle="tooltip" data-placement="right" title="直达" rel="nofollow">
+                            <i class="iconfont icon-goto"></i>
+                        </a>
+                    </div>
+                </div>
+                
             </div>
             <br />
             
@@ -3691,18 +3731,24 @@
                         </div>
                         <div class="search-group group-a"><span class="type-text text-muted">常用</span>
                             <ul class="search-type">
+								<li><input checked="checked" hidden="" type="radio" name="type2" 
+                                    id="m_type-searx" value="https://searx.org/search?q=" data-placeholder="searx">
+                                    <label for="m_type-searx"><span class="text-muted">searx</span></label></li>
                                 <li><input checked="checked" hidden="" type="radio" name="type2" 
                                     id="m_type-baidu" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下，你就知道">
                                     <label for="m_type-baidu"><span class="text-muted">百度</span></label></li>
-				<li><input hidden="" type="radio" name="type2"
+								<li><input hidden="" type="radio" name="type2"
                                     id="m_type-bing" value="https://cn.bing.com/search?q=" data-placeholder="微软必应搜索">
                                     <label for="m_type-bing"><span class="text-muted">必应</span></label></li>
                                 <li><input hidden="" type="radio" name="type2" 
                                     id="m_type-google" value="https://www.google.com/search?q=" data-placeholder="谷歌搜索">
                                     <label for="m_type-google"><span class="text-muted">谷歌</span></label></li>
                                 <li><input hidden="" type="radio" name="type2" 
-                                    id="m_type-anaconda" value="https://fsofso.com/search?q=" data-placeholder="F搜">
-                                    <label for="m_type-anaconda"><span class="text-muted">F搜</span></label></li>
+                                    id="m_type-fsou" value="https://fsofso.com/search?q=" data-placeholder="F搜">
+                                    <label for="m_type-fsou"><span class="text-muted">F搜</span></label></li>
+								<li><input hidden="" type="radio" name="type2" 
+                                    id="m_type-red" value="https://www.hong.ke/search?query=" data-placeholder="红客搜索">
+                                    <label for="m_type-red"><span class="text-muted">红客</span></label></li>
                                 <li><input hidden="" type="radio" name="type2" 
                                     id="m_type-pubmed" value="https://www.sogou.com/web?query=" data-placeholder="搜狗搜索">
                                     <label for="m_type-pubmed"><span class="text-muted">搜狗搜索</span></label></li>
@@ -3745,8 +3791,14 @@
                                         value="https://ping.chinaz.com/" data-placeholder="请输入网址(不带 https://)"><label
                                         for="m_type-ping"><span class="text-muted">PING 检测</span></label></li>
                                 <li><input hidden="" type="radio" name="type2" id="m_type-404"
-                                        value="https://tool.chinaz.com/Links/?DAddress=" data-placeholder="请输入网址(不带 https://)"><label 
+                                        value="https://ntool.chinaz.com/linksTesting/list?type=3&url=" data-placeholder="请输入网址(不带 https://)"><label 
                                         for="m_type-404"><span class="text-muted">死链检测</span></label></li>
+								<li><input hidden="" type="radio" name="type2" id="m_type-ip"
+                                        value="https://ipuu.net/query/ip?search=" data-placeholder="请输入网址(不带 https://)"><label 
+                                        for="m_type-ip"><span class="text-muted">IP查询</span></label></li>
+								<li><input hidden="" type="radio" name="type2" id="m_type-company"
+                                        value="https://aiqicha.baidu.com/s?q=" data-placeholder="请输入企业名称"><label 
+                                        for="m_type-company"><span class="text-muted">企业查询</span></label></li>
                             </ul>
                         </div>
                         <div class="search-group group-d"><span class="type-text text-muted">社区</span>
@@ -3792,9 +3844,9 @@
                                 <li><input hidden="" type="radio" name="type2" id="m_type-zhaopin"
                                     value="https://sou.zhaopin.com/jobs/searchresult.ashx?kw=" data-placeholder="智联招聘">
                                     <label for="m_type-zhaopin"><span class="text-muted">智联招聘</span></label></li>
-                                <li><input hidden="" type="radio" name="type2" id="m_type-51job"
-                                    value="https://search.51job.com/?" data-placeholder="前程无忧">
-                                    <label for="m_type-51job"><span class="text-muted">前程无忧</span></label></li>
+                                <li><input hidden="" type="radio" name="type2" id="m_type-bossjob"
+                                    value="https://www.zhipin.com/job_detail/?city=100010000&query=" data-placeholder="boss直聘">
+                                    <label for="m_type-bossjob"><span class="text-muted">boss直聘</span></label></li>
                                 <li><input hidden="" type="radio" name="type2" id="m_type-lagou"
                                     value="https://www.lagou.com/jobs/list_" data-placeholder="拉钩网">
                                     <label for="m_type-lagou"><span class="text-muted">拉钩网</span></label></li>
